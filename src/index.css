@@ -86,6 +86,7 @@ button:hover , .button:hover {
 }
 
 
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -145,8 +146,110 @@ nav ul li {
   margin-right: 10px;
   background-color: black;
 }
-
-
+@media screen and (max-width: 1280px) {
+  .logo h1 {
+    font-size: 22px;
+  }
+  .logo h2 {
+    font-size: 15px;
+  }
+  .logo span {
+    width: 70px;
+  }
+  nav ul li {
+    margin: 0 20px;
+  }
+  .logo {
+    margin: 0 30px;
+  }
+  .nav-link a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 914px) {
+  .logo h1 {
+    font-size: 18px;
+  }
+  .logo h2 {
+    font-size: 14px;
+  }
+  .logo span {
+    width: 40px;
+  }
+  nav ul li {
+    margin: 0 15px;
+  }
+  .logo {
+    margin: 0 15px;
+  }
+  .nav-link a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav ul li:nth-child(1) {
+    order: 2;
+  }
+  nav ul li:nth-child(2) {
+    order: 3;
+  }
+  nav ul li:nth-child(3) {
+    order: 1;
+  }
+  nav ul li:nth-child(4) {
+    order: 4;
+  }
+  nav ul li:nth-child(5) {
+    order: 5;
+  }
+  .logo {
+    margin: 0;
+  }
+  nav ul {
+    justify-content: space-between;
+    margin: 0 10px;
+  }
+  nav ul li {
+    margin: 0 0px;
+    padding: 0;
+  }
+  .logo h1 {
+    font-size: 14px;
+  }
+  .logo h2 {
+    font-size: 11px;
+  }
+  .logo span {
+    width: 30px;
+  }
+  .nav-link a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .logo h1 {
+    font-size: 12px;
+  }
+  .logo h2 {
+    font-size: 9px;
+  }
+  .logo span {
+    width: 20px;
+  }
+  .nav-link a {
+    font-size: 13px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+   }
+  nav ul li {
+    width: 60%;
+    margin-bottom: 5px;
+  }
+  .logo {
+    display: none;
+  }
+}
 .home {
   background: url(../public/assets/home.jpg) center;
   background-size: cover;
@@ -177,7 +280,43 @@ nav ul li {
 .home button a {
   color: white;
 }
-
+@media screen and (max-width: 800px) {
+  .home div {
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 20px;
+  }
+  .home p {
+    line-height: 30px;
+    font-size: 18px;
+  }
+  .home .button {
+    width: 170px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .home p {
+    margin: 0 30px;
+  }
+  .home .button {
+    width: 170px;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .home p {
+    margin: 0 10px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .home .button {
+    width: 170px;
+    margin-top: 30px;
+    font-size: 11px;
+  }
+}
 
 
 .restaurant {
@@ -230,6 +369,30 @@ nav ul li {
 .restaurant a {
   color: white;
 }
+@media screen and (max-width: 968px) {
+  .restaurant .button {
+    margin-top: 0;
+    font-size: 11px;
+  }
+  .restaurant article p {
+    font-size: 13px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .restaurant {
+    display: flex;
+    flex-direction: column-reverse;
+    background-position: bottom;
+  }
+  .restaurant div {
+    width: 100%;
+  }
+  .restaurant .articles {
+    height: 100%;
+    justify-content: space-between;
+  }
+}
 
 
 
@@ -268,6 +431,22 @@ nav ul li {
   background-color: rgba(0, 0, 0, 0.164);
   color: transparent;
 }
+@media screen and (max-width: 850px) {
+  .menu-cards h3 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu-cards ul {
+    flex-direction: column;
+  }
+  .menu-cards ul li {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+
 
 
 
@@ -282,7 +461,11 @@ nav ul li {
   padding: 20px;
   margin: 20px;
 }
-
+@media screen and (max-width: 798px) {
+  .la-carte img {
+    width: 100%;
+  }
+}
 
 
 
@@ -303,7 +486,6 @@ nav ul li {
   height: 70vh;
   width: 60%;
 }
-
 .galerie .fas {
   position: absolute;
   font-size: 50px;
@@ -316,15 +498,56 @@ nav ul li {
 .galerie .fa-chevron-left {
   left: 200px;
   top: 50%;
-
 }
 .galerie .fa-chevron-right {
   right: 200px;
   top: 50%;
 }
-
-
-
+@media screen and (max-width: 1024px) {
+  .galerie img {
+    height: 70vh;
+    width: 80%;
+  }
+  .galerie .fa-chevron-left {
+    left: 20px;
+  }
+  .galerie .fa-chevron-right {
+    right: 20px;
+  }
+  .galerie .fas {
+    font-size: 20px;
+    background-color: rgba(73, 73, 73, 0.553);
+    padding: 10px 12px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .galerie-content {
+    height: 450px;
+  }
+  .galerie img {
+    height: 400px;
+    width: 87%;
+  }
+  .galerie .fa-chevron-left {
+    left: 0;
+  }
+  .galerie .fa-chevron-right {
+    right: 0;
+  }
+  .galerie .fas {
+    font-size: 20px;
+    background-color: transparent;
+    padding: 10px 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .galerie-content {
+    height: 350px;
+  }
+  .galerie img {
+    height: 300px;
+  }
+}
 
 .reservations {
   height: 83vh;
@@ -368,7 +591,6 @@ nav ul li {
   width: 48%;
   margin: 30px 0;
 }
-
 .formulaire input {
   height: 30px;
   padding-left: 10px;
@@ -452,6 +674,51 @@ label {
   cursor: default;
   background: none;
 }
+@media screen and (max-width: 1300px) {
+  .contacts {
+    width: 40%;
+  }
+  .container-form {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .reservations {
+    height: 100%;
+  }
+  .reservations form {
+    flex-direction: column;
+  }
+  .contacts, .container-form {
+    width: 80%;
+    margin-right: 0;
+  }
+  .contacts .button {
+    margin: 10px 20px;
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .formulaire {
+    flex-direction: column;
+  }
+  .part1 , .part2 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container-form , .contacts {
+    padding: 20px;
+    width: 90%;
+  }
+  .reservations form {
+    padding: 10px 0px;
+  }
+  .contacts .button {
+    margin: 10px 20px;
+    width: 100%;
+  }
+}
 
 
 
@@ -465,7 +732,11 @@ footer {
   left: 0;
   right: 0;
 }
-
+@media screen and (max-width: 500px) {
+  footer {
+    font-size: 10px;
+  }
+}
 
 
 
