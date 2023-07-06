@@ -1,13 +1,502 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeInTranslate {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes filling {
+  0%, 90% { fill: black; fill-opacity: 0; }
+  100% { fill: black; fill-opacity: 1; }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    z-index: 99;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+    display: none;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+body {
+  font-family: 'Fraunces', serif;
+  letter-spacing: 2px;
+  position: relative;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+button , .button{
+  background-color: #27272749;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-family: 'Fraunces', serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid #ffffffa5;
+  cursor: pointer;
+  transition: 0.5s;
+  text-align: center;
+}
+button:hover , .button:hover {
+  background-color: #272727d6;
+  color: goldenrod;
+}
+.displayNone {
+  display: none;
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+nav ul li {
+  padding: 0 50px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.nav-link {
+  position: relative;
+  transition: 0.5s;
+}
+.nav-link a:hover {
+  color: goldenrod;
+  transition: 0.5s;
+}
+.nav-link:before, .nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  transition: width 0.5s; 
+}
+.nav-link:before {
+  left: 0;
+  background-color: goldenrod;
+}
+.nav-link:after {
+  right: 0;
+  background-color: goldenrod;
+}
+.nav-link:hover:before,
+.nav-link:hover:after {
+  width: 50%; 
+}
+.logo h1 {
+  font-size: 30px;
+}
+.logo h2 {
+  font-weight: 100;
+  font-size: 20px;
+}
+.logo div {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  text-align: left;
+}
+.logo span {
+  display: flex;
+  height: 0.5px;
+  width: 100px;
+  margin-right: 10px;
+  background-color: black;
+}
+
+
+.home {
+  background: url(../public/assets/home.jpg) center;
+  background-size: cover;
+  width: 100%;
+  height: 83vh;
+  position: relative;
+}
+.home div {
+  color: white;
+  position: absolute;
+  right: 60px;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home p {
+  line-height: 35px;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 100;
+  text-align: center;
+}
+.home .button {
+  width: 180px;
+  margin-top: 40px;
+}
+.home button a {
+  color: white;
+}
+
+
+
+.restaurant {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 83vh;
+  background: url(../public/assets/image8.jpg);
+  background-size: cover;
+}
+.restaurant div {
+  width: 50%;
+}
+.restaurant .articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000d4;
+}
+.restaurant article {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+.restaurant article p {
+  font-weight: 100;
+}
+.restaurant article:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.restaurant article:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.restaurant article p {
+  margin: 20px;
+  line-height: 29px;
+  color: white;
+  width: 80%;
+  text-align: center;
+  font-size: 15px;
+}
+.restaurant .button {
+  margin-top: 20px;
+}
+.restaurant a {
+  color: white;
+}
+
+
+
+.menu-cards ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.menu-cards ul li {
+  width: 33%;
+  height: 83vh;
+}
+.menu-cards a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.menu-cards h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.763);
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 20px;
+  transition: 0.8S ease-in-out;
+}
+.menu-cards h3:hover {
+  background-color: rgba(0, 0, 0, 0.164);
+  color: transparent;
+}
+
+
+
+.la-carte {
+  display: flex;
+  justify-content: center;
+}
+.la-carte img {
+  width: 70%;
+  height: 100%;
+  border: 10px double grey;
+  padding: 20px;
+  margin: 20px;
+}
+
+
+
+
+.galerie {
+  position: relative;
+  background: url(../public/assets/image1.jpg);
+  background-size: cover;
+}
+.galerie-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.868);
+  height: 83vh;
+  width: 100%;
+}
+.galerie img {
+  height: 70vh;
+  width: 60%;
+}
+
+.galerie .fas {
+  position: absolute;
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.553);
+  padding: 10px 16px;
+  color: rgba(255, 255, 255, 0.737);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.galerie .fa-chevron-left {
+  left: 200px;
+  top: 50%;
+
+}
+.galerie .fa-chevron-right {
+  right: 200px;
+  top: 50%;
+}
+
+
+
+
+.reservations {
+  height: 83vh;
+  background: url(../public/assets/image1.jpg);
+  background-size: cover;
+  position: relative;
+  display: flex;
+}
+.reservations form {
+  background: #000000ae;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-form {
+  background: #00000092;
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.reservations form h2 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 100;
+}
+.formulaire {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.part1, .part2 {
+  width: 48%;
+  margin: 30px 0;
+}
+
+.formulaire input {
+  height: 30px;
+  padding-left: 10px;
+  outline: none;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.part1 input {
+  margin: 10px 0;
+}
+.form-btns {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+}
+.reservations .error {
+  color: red;
+  font-size: 12px;
+  font-weight: 100;
+}
+.confirmation {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #00000098;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+.confirmation h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+.confirmation button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+}
+.submit-btn {
+  margin-top: 20px;
+  width: 100%;
+}
+.contacts {
+  background: #000000b4;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 25%;
+}
+.contacts .button {
+  text-align: center;
+  margin: 20px;
+  width: 100%;
+}
+.contact-email a {
+  color: white;
+  text-transform: lowercase;
+  font-size: 15px;
+}
+.contact-email a:hover {
+  color: goldenrod;
+}
+.adresse {
+  text-transform: lowercase;
+  font-size: 15px;
+  line-height: 20px;
+}
+.adresse:hover {
+  color: white;
+  cursor: default;
+  background: none;
+}
+
+
+
+
+footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+.loader-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  z-index: 99;
+}
+.fade-out {
+  animation: fadeOut 3s ease-in-out forwards;
+}
+.text-line {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 4s linear forwards, filling 4s ease-in forwards;
+  font-size: 80px;
+
+}
+.text-line text {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Fraunces', serif;
+  letter-spacing: 2px;
+}
+
+
+
