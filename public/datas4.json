@@ -1,0 +1,18 @@
+[
+    {
+        "url": "./assets/carte/entrees.png",
+        "name": "entrees"
+    },
+    {
+        "url": "./assets/carte/plats.png",
+        "name": "plats"
+    },
+    {
+        "url": "./assets/carte/desserts.png",
+        "name": "desserts"
+    },
+    {
+        "url": "./assets/carte/boissons.png",
+        "name": "boissons"
+    }
+]
