@@ -107,6 +107,7 @@ section {
 
 nav {
   height: 13vh;
+  background: white;
 }
 nav ul {
   display: flex;
@@ -280,6 +281,13 @@ nav ul li {
     display: none;
   }
 }
+@media screen and (min-height: 900px) {
+  nav {
+    height: 10vh;
+  }
+}
+
+
 .home {
   background: url(../public/assets/home.jpg) center;
   background-size: cover;
@@ -772,6 +780,12 @@ footer {
     font-size: 10px;
   }
 }
+@media screen and (min-height: 1000px) {
+  footer {
+    height: 8vh;
+  }
+}
+
 
 
 
