@@ -760,7 +760,6 @@ footer {
   stroke-dashoffset: 500;
   animation: dash 4s linear forwards, filling 4s ease-in forwards;
   font-size: 80px;
-
 }
 .text-line text {
   font-weight: bold;
@@ -768,6 +767,22 @@ footer {
   font-family: 'Fraunces', serif;
   letter-spacing: 2px;
 }
+@media screen and (max-width: 968px) {
+  .text-line {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .text-line {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .text-line {
+    font-size: 25px;
+  }
+}
+
 
 
 
