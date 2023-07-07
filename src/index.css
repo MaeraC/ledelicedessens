@@ -84,9 +84,30 @@ button:hover , .button:hover {
 .displayNone {
   display: none;
 }
+section {
+  height: 85vh;
+}
+@media screen and (min-width: 600px) {
+  section {
+    height: 88vh;
+  }
+}
+@media screen and (min-width: 900px) {
+  section {
+    height: 86vh;
+  }
+}
+@media screen and (min-width: 1280px) {
+  section {
+    height: 83vh;
+  }
+}
 
 
 
+nav {
+  height: 13vh;
+}
 nav ul {
   display: flex;
   justify-content: center;
@@ -156,6 +177,9 @@ nav ul li {
   .logo span {
     width: 70px;
   }
+  nav {
+    height: 10vh;
+  }
   nav ul li {
     margin: 0 20px;
   }
@@ -175,6 +199,9 @@ nav ul li {
   }
   .logo span {
     width: 40px;
+  }
+  nav {
+    height: 8vh;
   }
   nav ul li {
     margin: 0 15px;
@@ -239,6 +266,9 @@ nav ul li {
   .nav-link a {
     font-size: 13px;
   }
+  nav {
+    height: 15vh;
+  }
   nav ul {
     flex-wrap: wrap;
    }
@@ -254,7 +284,6 @@ nav ul li {
   background: url(../public/assets/home.jpg) center;
   background-size: cover;
   width: 100%;
-  height: 83vh;
   position: relative;
 }
 .home div {
@@ -322,7 +351,6 @@ nav ul li {
 .restaurant {
   display: flex;
   flex-direction: row-reverse;
-  height: 83vh;
   background: url(../public/assets/image8.jpg);
   background-size: cover;
 }
@@ -414,7 +442,7 @@ nav ul li {
 }
 .menu-cards ul li {
   width: 33%;
-  height: 83vh;
+  height: 83vh; /**********/
 }
 .menu-cards a {
   width: 100%;
@@ -490,7 +518,7 @@ nav ul li {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.868);
-  height: 83vh;
+  height: 83vh;   /******/
   width: 100%;
 }
 .galerie img {
@@ -561,7 +589,6 @@ nav ul li {
 }
 
 .reservations {
-  height: 83vh;
   background: url(../public/assets/image1.jpg);
   background-size: cover;
   position: relative;
@@ -735,13 +762,13 @@ label {
 
 
 footer {
-  padding: 10px;
   text-align: center;
   font-size: 13px;
-  position: absolute;
-  bottom: -35px;
-  left: 0;
-  right: 0;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
 }
 @media screen and (max-width: 500px) {
   footer {
@@ -815,3 +842,4 @@ footer {
   text-decoration: underline;
 
 }
+
