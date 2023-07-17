@@ -108,6 +108,7 @@ section {
 nav {
   height: 13vh;
   background: white;
+  border-bottom: solid 1px rgba(128, 128, 128, 0.288);
 }
 nav ul {
   display: flex;
@@ -497,6 +498,8 @@ nav ul li {
 .la-carte {
   display: flex;
   justify-content: center;
+  height: 100%;
+  padding-top: 20px
 }
 .la-carte img {
   width: 70%;
