@@ -595,10 +595,10 @@ nav ul li {
     background: black;
   }
   .galerie .fa-chevron-left {
-    top: 30%;
+    top: 35%;
   }
   .galerie .fa-chevron-right {
-    top: 30%;
+    top: 35%;
   }
 }
 @media screen and (max-width: 400px) {
@@ -765,7 +765,7 @@ label {
   .part1 , .part2 {
     width: 100%;
   }
-  .contacts, .container-form {
+  .contacts, .container-form, .contacts .button {
     width: 100%;
     margin-right: 0;
   }
