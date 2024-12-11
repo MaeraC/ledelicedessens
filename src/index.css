@@ -65,7 +65,7 @@ ul {
 button , .button{
   background-color: #27272749;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 30px;
   border: none;
   outline: none;
   font-family: 'Fraunces', serif;
@@ -150,11 +150,11 @@ nav ul li {
   width: 50%; 
 }
 .logo h1 {
-  font-size: 30px;
+  font-size: 25px;
 }
 .logo h2 {
   font-weight: 100;
-  font-size: 20px;
+  font-size: 16px;
 }
 .logo div {
   display: flex;
@@ -312,7 +312,7 @@ nav ul li {
   text-align: center;
 }
 .home .button {
-  width: 180px;
+  padding: 15px 40px;
   margin-top: 40px;
 }
 .home button a {
@@ -363,6 +363,9 @@ nav ul li {
   background: url(../public/assets/image8.jpg);
   background-size: cover;
 }
+.restaurant {
+  height: initial;
+}
 .restaurant div {
   width: 50%;
 }
@@ -372,10 +375,11 @@ nav ul li {
   justify-content: center;
   align-items: center;
   background-color: #000000d4;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 .restaurant article {
   width: 100%;
-  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -388,12 +392,12 @@ nav ul li {
 }
 .restaurant article:nth-child(1) {
   animation-delay: 0.2s;
+  margin-bottom: 50px;
 }
 .restaurant article:nth-child(2) {
   animation-delay: 0.4s;
 }
 .restaurant article p {
-  margin: 20px;
   line-height: 29px;
   color: white;
   width: 80%;
@@ -401,7 +405,11 @@ nav ul li {
   font-size: 14px;
 }
 .restaurant a {
-  color: white;
+  color: goldenrod;
+  margin: 50px 0;
+}
+.restaurant a:hover {
+  color: white !important;
 }
 @media screen and (max-width: 968px) {
   .restaurant .button {
